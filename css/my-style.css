@@ -333,6 +333,87 @@ header .nav a:hover {
 .iti.iti--allow-dropdown{
     width: 100%;
 }
+.table-container {
+						width: 100%;
+						max-width: 1200px;
+
+
+
+						overflow: hidden;
+						margin: auto;
+						margin-top: 40px;
+
+					}
+
+					table {
+						width: 100%;
+						border-collapse: collapse;
+						border: 1px solid #2a3142;
+					}
+
+					th {
+
+						padding: 1.5rem;
+						font-size: 1.25rem;
+						font-weight: 400;
+
+						border-right: 1px solid #3a4356;
+					}
+
+					th:last-child {
+						border-right: none;
+					}
+
+					td {
+						padding: 1.5rem;
+						font-size: 1.1rem;
+						font-weight: 400;
+
+						border-top: 1px solid #2a3142;
+						border-right: 1px solid #2a3142;
+						transition: background 0.3s ease;
+					}
+
+					td:last-child {
+						border-right: none;
+					}
+
+					tr:not(.final) td {
+						background: transparent;
+					}
+
+					tr:not(.final):hover td {
+						background: rgba(255, 255, 255, 0.05);
+					}
+
+
+
+					table .footer {
+						background: linear-gradient(90deg, #7c3aed 0%, #ec4899 100%);
+						padding: 2rem;
+						text-align: center;
+					}
+
+					table .footer h2 {
+						font-size: 2rem;
+						font-weight: 900;
+						color: white;
+						letter-spacing: 0.1em;
+						text-transform: uppercase;
+						margin: 0;
+					}
+
+					@media (max-width: 768px) {
+						table .footer h2 {
+							font-size: 1.5rem;
+						}
+
+						th,
+						td {
+							padding: 1rem;
+							font-size: 1rem;
+						}
+					}
 @media (min-width: 576px) {
     .col-sm-3 {
         flex: 0 0 auto;

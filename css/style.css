@@ -94,7 +94,6 @@ header:before{
 .logo {
     align-items: center;
     display: flex;
-    z-index: 9999;
 
 }
 
@@ -950,6 +949,7 @@ padding: 5px;
     align-items: center;
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .features2 {
@@ -989,7 +989,6 @@ padding: 5px;
 }
 
 .features-column {
-    padding: 15px 15px;
     min-height: 70px;
     display: flex;
     flex-direction: column;
@@ -1125,11 +1124,13 @@ padding: 5px;
     height: fit-content;
 }
 .location-row{
-    display: flex;
+    display: grid;
     gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .location-row > img{
     border-radius: 10px;
+   grid-column: span 2;
 }
 
 .location-header {
@@ -1899,8 +1900,26 @@ label {
 }
 
 @media(max-width: 990px) {
+    .location-row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .scroll-start .menu span {
 
+    background: black;
 
+}
+    .scroll-start .open .menu span {
+
+    background: white;
+
+}
+.scroll-start .nav-items{
+    color: white;
+}
+.scroll-start .nav-items.active:before {
+    background:white;
+}
     .center-card {
         order: -1;
         margin-bottom: 20px;
@@ -2035,7 +2054,9 @@ label {
     .features2 h5 {
         font-size: 20px;
     }
-
+.features2 .button-site {
+    margin-left: 0;
+}
 
     .footer-column {
         border-right: none !important;
@@ -2056,13 +2077,9 @@ label {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        align-items: start;
         margin-bottom: 30px;
     }
 
-    .newst-second-row {
-        margin-top: 30px;
-    }
 
 
     .amenities-row {
@@ -2087,6 +2104,19 @@ label {
 }
 
 @media(max-width: 768px) {
+        .sticky-bar .features-column {
+        display: none;
+    }
+        .sticky-bar .features-column.features-column-btn {
+        display: block;
+    }
+    .sticky-bar  .features-row {
+        grid-template-columns: 1fr;
+    }
+     .sticky-bar  .features-row .button-site{
+        margin:7px auto!important;
+        min-width: 340px;
+    }
     .investment-grid {
         grid-template-columns: 1fr;
     }
@@ -2103,14 +2133,7 @@ label {
         gap: 0;
     }
 
-    .features-column:nth-child(2) {
-        border: none;
-        border-bottom: 2px solid #00575b1f;
-    }
 
-    .features-column:nth-child(1) {
-        border-bottom: 2px solid #00575b1f;
-    }
 
 
     .home .carousel-caption {
@@ -2298,7 +2321,9 @@ label {
     text-align: center!important;
 }
 
-
+.footer .features2{
+    padding: 20px;
+}
 
 .home .swiper-pagination span {
     width: 10px;
@@ -2315,9 +2340,6 @@ label {
         width: 100%;
     }
 
-    .header-left {
-        display: none;
-    }
 
 
     .newst-city-col {
@@ -2351,16 +2373,27 @@ label {
     .services-start,
     .about2,
     .ameninties,
-    .why-invest, .policy {
+    .why-invest, .policy, .about .row {
 
         padding: 50px 20px;
     }
 
+.about-right{
+    padding-right: 0;
+}
 
+.features-section {
+    gap: 0px;
+}
 
+.feature-box{
+    flex-direction: row;
+}
+.features-section {
 
+    grid-template-columns: 1fr;
 
-
+}
     .sub-page {
         padding: 80px 20px;
     }
@@ -2454,8 +2487,14 @@ label {
     text-align: left;
 }
 
-
-
+.description-content h2{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.description-content {
+    padding: 50px 20px;
+}
 }
 
 
@@ -2469,7 +2508,6 @@ label {
 
     .features .features-column {
         flex-direction: column;
-        gap: 5px;
     }
 
     .logo-footer-column {
@@ -2479,10 +2517,9 @@ label {
 
 
     .newst-second-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 20px;
-        padding: 20px;
+        min-width: 100%;
+        padding: 25px;
     }
 
     .newst-city-col {
@@ -2510,7 +2547,6 @@ label {
     }
 
     .features-column {
-        padding: 20px 12px;
         justify-content: center;
     }
 
@@ -2523,9 +2559,7 @@ label {
         font-size: 14px;
     }
 
-    .features .features-column {
-        padding: 12px;
-    }
+
 
     .property-card {
         padding: 0px;
