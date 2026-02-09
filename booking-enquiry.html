@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Register Your Interest</title>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Register Your Interest" />
+    <meta name="description"
+        content="Danube Breez, Invest in BREEZ by Danube – Dubai's newest waterfront landmark. 1–4BR luxury apartments with private pools, ocean views & Golden Visa Dubai, Maritime City, luxury waterfront apartment for Sale in Dubai.">
+    <meta name="keywords" content="property">
+    <meta property="og:description"
+        content="Danube Breez, luxury waterfront apartment for Sale in Dubai, Maritime City, luxury waterfront apartment for Sale in Dubai." />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="css/my-style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        .flex-align {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.19);
+            padding: 10px 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        .w-14px {
+            width: 14px;
+        }
+
+        .register {
+            width: 100%;
+            display: flex;
+        }
+
+        .register-col {
+            width: 45%;
+            position: relative;
+            height: 100vh;
+        }
+
+        /* .register-col.register-left:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            background-color: #00000056;
+        } */
+
+        img.logo-login {
+            position: absolute;
+            width: 200px !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+        }
+
+        .register-left img {
+            width: 100%;
+        }
+
+        .register-right {
+            padding: 50px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: auto;
+            box-sizing: border-box;
+            width: 55%;
+        }
+
+        .register-right>div {
+            width: 100%;
+        }
+
+        .register h6 {
+            font-size: 16px;
+            font-weight: 300;
+            margin: 15px 0 0 0;
+            line-height: 26px;
+        }
+
+        .text-gold {
+            color: #DEB76C !important;
+            text-decoration: underline;
+        }
+
+        .register h4 {
+            color: #DEB76C;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        .register .logo {
+            height: 100px;
+            object-fit: contain;
+            object-position: left;
+            margin-bottom: 35px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .form .input-div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0;
+        }
+
+        .col-md-6 {
+            width: calc(50% - 6px);
+        }
+
+        .col-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 10px 0;
+        }
+
+        .form input,
+        .form select {
+            border: 1px solid rgba(209, 185, 125, 0.25);
+            border-radius: 4px;
+            padding: 5px 20px;
+            height: 48px;
+            background: rgb(255, 255, 255);
+            box-sizing: border-box;
+        }
+
+        .register label {
+            font-size: 14px;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .button-site {
+            background: var(--main-color);
+            color: #fff;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            height: 48px;
+            font-weight: 500;
+            border-radius: 4px;
+            width: 100%;
+            margin-top: 30px;
+            border: none;
+            text-decoration: none;
+        }
+
+        .button-site:hover span {
+            animation: btn_anim .3s ease;
+            height: 100%;
+        }
+
+        .button-site label {
+            z-index: 9;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 0;
+        }
+.button-site:hover label{
+    color: white;
+    cursor: pointer;
+}
+        .button-site span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: #0e2246;
+            height: 0%;
+            top: 0;
+            z-index: 1;
+            transition: .3s;
+        }
+
+        ::placeholder {
+            color: #000000;
+        }
+
+        .register h3 {
+            margin: 0;
+        }
+
+        .register h2 {
+            font-weight: 800;
+            margin: 0;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        .register-left-text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .required {
+            position: relative;
+            width: fit-content;
+        }
+
+        .required:before {
+            content: '*';
+            position: absolute;
+            right: -8px;
+            top: 0;
+            font-size: 14px;
+            color: #D1B97D;
+        }
+
+        .btn-outline-club7 {
+            border: 1px solid #FFFFFFB2;
+            background: #202127;
+            color: #D1B97D;
+            font-weight: 600;
+            height: 38px;
+            font-size: 16px;
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            min-width: 120px;
+        }
+
+        .btn-outline-club7:hover {
+            border: 1px solid #D1B97D;
+            color: #D1B97D;
+            box-shadow: 3px 3px 5px 2px #D1B97D2b;
+            transition: .3s;
+        }
+
+        .btn-club7 {
+            background: #D1B97D !important;
+            color: #422a05 !important;
+            height: 38px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            min-width: 120px;
+            font-size: 16px;
+        }
+
+        .btn-club7:hover {
+            background-color: #D1B97D;
+            box-shadow: 3px 3px 5px 2px #D1B97D2b;
+            transition: .3s;
+        }
+
+        p {
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        @media (min-width: 768px) {
+            .register-bg.mobb {
+                display: none;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .register {
+                flex-wrap: wrap;
+            }
+
+            .register-col {
+                width: 100%;
+                height: auto;
+            }
+
+            .register {
+                overflow: auto;
+                height: 100vh;
+            }
+
+            .register-bg.mobb {
+                object-position: left top;
+            }
+
+            .register-bg.deskk {
+                display: none;
+            }
+
+            .register-left.register-col {
+                height: 200px;
+            }
+
+            img.logo-login {
+                width: 100px !important;
+                left: auto;
+                right: 30px;
+                top: 30px;
+                transform: none;
+            }
+
+            .register-left-text {
+                text-align: center;
+            }
+
+            .register h6,
+            h4 {
+                text-align: center;
+            }
+
+            .logo {
+                display: flex;
+                margin: 0 auto;
+            }
+
+            .col-md-6 {
+                width: 100%;
+            }
+
+            .register-right {
+                padding: 25px;
+            }
+        }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '827265666546234');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=827265666546234&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="login-bg">
+    <section>
+        <div class="register">
+            <div class="register-left register-col">
+                <img src="images/tower3.png" style="height: 100%;object-fit: cover; " class="register-bg deskk">
+                <img src="images/hero/hero2.webp" style="height: 100%;object-fit: cover; object-position: right center;" class="register-bg mobb">
+                <!-- <img src="images/logo-white.png" class="logo-login"> -->
+            </div>
+            <div class="register-right register-col">
+                <a href="index.html" style="width: fit-content;display: flex; text-decoration: none; ">
+                    <h3 style="font-size:28px; display:flex;align-items:center; width:fit-content; gap:15px;">
+                        <img src="images/back.png" style="width: 20px; filter: invert(1);">Booking Enquiry
+                    </h3>
+                </a>
+                <div class="register-section">
+                    <form id="registerForm" action="https://formsubmit.co/breezmaritimecity@gmail.com" method="POST">
+                        <!-- Disable captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Redirect or confirmation message handling -->
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_webhook"
+                            value="https://connect.pabbly.com/workflow/sendwebhookfiledata/IjU3NjIwNTZjMDYzMDA0M2Q1MjY4NTUzMyI_3D_pc/IjU3NjYwNTY0MDYzNjA0Mzc1MjY1NTUzMjUxMzUi_pc" />
+                        <input type="hidden" name="_subject" value="New Registration Form Submission">
+
+                        <div class="form">
+                            <div class="row input-div">
+                                <div class="col-md-6 col-item">
+                                    <input type="text" name="Full Name" placeholder="Enter Your Full Name"
+                                        class="input w-100" required />
+                                </div>
+
+                                <div class="col-md-6 col-item">
+                                    <input type="email" name="Email" placeholder="Enter email id" class="input w-100"
+                                        required />
+                                </div>
+
+                                <div class="col-md-6 col-item">
+                                    <input id="phone" type="tel" name="Phone" placeholder="Phone" class="input w-100"
+                                        required />
+                                </div>
+
+                                <div class="col-md-6 col-item">
+                                    <input type="text" name="Nationality" placeholder="Nationality" class="input w-100"
+                                        required />
+                                </div>
+                            </div>
+
+                            <div class="row input-div">
+                                <div class="col-md-6 col-item">
+                                    <label for="ApartmentType">Select Apartment Type *</label>
+                                    <select id="ApartmentType" name="Apartment Type" class="select-input w-100"
+                                        required>
+                                        <option value="">-- Select Apartment Type --</option>
+                                        <option value="Studio">Studio</option>
+                                        <option value="1 Bedroom">1 Bedroom</option>
+                                        <option value="1 Bedroom Premium">1 Bedroom Premium</option>
+                                        <option value="2 Bedroom">2 Bedroom Premium</option>
+                                        <option value="3 Bedroom">3 Bedroom Premium</option>
+                                        <option value="4 Bedroom (On Request)">4 Bedroom Premium</option>
+                                        <option value="BREEZ Villas (On Request)">BREEZ Villas (On Request)</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-item">
+                                    <label for="buyPlan">How Soon You Are Planning to Buy *</label>
+                                    <select id="buyPlan" name="Buying Plan" class="select-input w-100" required>
+                                        <option value="">-- Select Urgency --</option>
+                                        <option value="Immediately">Immediately</option>
+                                        <option value="Within a Week Days">Within a Week</option>
+                                        <option value="Within 2 Weeks">Within 2 Weeks</option>
+                                        <option value="Within 1 Month">Within 1 Month</option>
+                                        <option value="Within 3 Months">Within 3 Months</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6 col-item">
+                                    <label for="budgetRange">Enter Your Budget Range *</label>
+                                    <select id="budgetRange" name="Budget Range" class="select-input w-100" required>
+                                        <option value="">-- Select Budget Range --</option>
+                                        <option value="AED 1.4 to 2 Million">AED 1.4 to 2 Million</option>
+                                        <option value="AED 2 to 2.5 Million">AED 2 to 2.5 Million</option>
+                                        <option value="AED 2.5 to 3 Million">AED 2.5 to 3 Million</option>
+                                        <option value="AED 3 to 3.5 Million">AED 3 to 3.5 Million</option>
+                                        <option value="AED 3.5 to 4 Million">AED 3.5 to 4 Million</option>
+                                        <option value="AED 10 M 4 Bed">AED 10 M 4 Bed</option>
+                                        <option value="30 Million AED - Villa">30 Million AED - Villa</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-item"
+                                    style="display: flex; align-items: center; gap: 10px; flex-direction: row;">
+                                    <input id="disclaimer" type="checkbox" required
+                                        style="width: 20px; height: 20px; accent-color: #00575b;" />
+                                    <label for="disclaimer" style="margin-left: 8px;">
+                                        User hereby agrees with the disclaimer policy when accessing / using this
+                                        website.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="to-register" class="button-site">
+                            <label>Register</label>
+                            <span></span>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="register-confirm-section" style="display: none;">
+                    <div class="p-4">
+                        <h5 style="font-size: 22px; line-height: 36px; color: #0ab767; margin-bottom: 20px;">✅ Your Apartment Booking Enquiry Submitted Successfully!!</h5>
+                        <p style="font-size: 16px; line-height: 1.6;">One of Our Sales Manager Will contact you back shortly to Assist you !!</p>
+
+                       
+                    </div>
+                     <div class="p-4">
+                       
+
+                        <h5 style="font-size: 20px; line-height: 1.6;">Schedule A Zoom/Google Meet with Sales Manager</h5>
+                        <a href="https://calendly.com/breezmaritimecity/60min" target="_blank" class="button-site" style="width: fit-content; padding: 10px 25px;">
+                           <label> Book an
+							Appoinment with Sales Manager</label>
+                             <span></span>
+							
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Initialize intl-tel-input and store the instance
+        const phoneInputField = document.querySelector("#phone");
+        const iti = window.intlTelInput(phoneInputField, {
+            initialCountry: "ae", // Default to UAE
+            preferredCountries: ["ae", "in", "us", "gb"],
+            utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+        });
+
+        // Form submission handler
+        document.getElementById("registerForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const submitBtn = document.getElementById("to-register");
+            const confirmSection = document.querySelector(".register-confirm-section");
+            const registerSection = document.querySelector(".register-section");
+
+            // Check if all required fields are filled
+            const requiredFields = form.querySelectorAll("[required]");
+            let allFilled = true;
+            requiredFields.forEach(field => {
+                if (!field.value.trim() || (field.type === "checkbox" && !field.checked)) {
+                    allFilled = false;
+                }
+            });
+
+            if (!allFilled) {
+                return;
+            }
+
+            // Get formatted phone number with country code
+            const fullPhone = iti.getNumber();
+            
+            // Validate phone number
+            if (!iti.isValidNumber()) {
+                return;
+            }
+
+            // Add loading effect to button
+            submitBtn.querySelector("label").textContent = "Submitting...";
+            submitBtn.disabled = true;
+
+            try {
+                // Create FormData with formatted phone number
+                const formData = new FormData(form);
+                formData.set("Phone", fullPhone); // Update phone with country code
+
+                const actionURL = form.action;
+
+                // Send to FormSubmit (which will automatically forward to Pabbly via _webhook)
+                const response = await fetch(actionURL, {
+                    method: "POST",
+                    body: formData,
+                    headers: { Accept: "application/json" },
+                });
+
+                if (response.ok) {
+                    // Show success confirmation section
+                    if (registerSection && confirmSection) {
+                        registerSection.style.display = "none";
+                        confirmSection.style.display = "block";
+                    }
+                    form.reset();
+                    iti.setNumber(''); // Reset phone input
+                } else {
+                    // Restore button on error
+                    submitBtn.querySelector("label").textContent = "Register";
+                    submitBtn.disabled = false;
+                }
+
+            } catch (err) {
+                console.error("Submission error:", err);
+                // Still restore button even on error
+                submitBtn.querySelector("label").textContent = "Register";
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+
+</html>
