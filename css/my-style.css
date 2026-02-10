@@ -335,7 +335,7 @@ header .nav a:hover {
 }
 .table-container {
 						width: 100%;
-						max-width: 1200px;
+						max-width: 1000px;
 
 
 
@@ -353,7 +353,7 @@ header .nav a:hover {
 
 					th {
 
-						padding: 1.5rem;
+						padding: 1rem;
 						font-size: 1.25rem;
 						font-weight: 400;
 
@@ -372,6 +372,7 @@ header .nav a:hover {
 						border-top: 1px solid #2a3142;
 						border-right: 1px solid #2a3142;
 						transition: background 0.3s ease;
+                        text-align: center;
 					}
 
 					td:last-child {
