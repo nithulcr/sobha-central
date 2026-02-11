@@ -545,7 +545,9 @@ h1{
 
     bottom: 6% !important;
 }
-
+.swiper-slide{
+    cursor:grab;
+}
 .home .swiper-pagination span {
 
     width: 30px;
@@ -811,7 +813,6 @@ padding: 5px;
 
 .property-card-top {
     position: relative;
-    margin-bottom: 10px;
     overflow: hidden;
     /* border-radius: 10px; */
 
@@ -834,7 +835,8 @@ padding: 5px;
     bottom: 0;
     left: 0; */
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 15px 0 15px;
+    background: var(--main-color);
 
 }
 
@@ -851,11 +853,13 @@ padding: 5px;
     line-height: 30px;
     font-weight: 500;
     margin-top: 5px;
+    color: white;
 }
 
 .property-card-head h5 {
     font-size: 16px;
     line-height: 20px;
+    color: white;
 }
 .property-row {
     display: flex;
@@ -870,6 +874,8 @@ padding: 5px;
     align-items: center;
     gap: 6px;
     width: 100%;
+    background: var(--main-color);
+    padding: 15px 15px 15px 15px;
 }
 
 .property-features img {
@@ -893,6 +899,7 @@ padding: 5px;
     display: flex;
     align-items: center;
     gap: 6px;
+    color: var(--main-color4);
 }
 
 .property-features h6 img {
@@ -2118,7 +2125,7 @@ header {
 
     .amenities-list li {
         padding: 5px;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 20px;
         text-align: center !important;
     }
@@ -2533,7 +2540,7 @@ width: 100%;
     }
 
     .features2 h6 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .newst-city-col h5 {
